@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Restaurant Feedback</title>
+    <link rel="stylesheet" href="contact-mcdonalds.css">
+</head>
+<body>
+    <form action="">
+        <h1>U.S. Restaurant Feedback</h1>
+        <p class="paragraph--margin">Have some restaurant feedback about your recent McDonald's visit? Tell us what you loved, or file a complaint in the form below so we can make your experience better next time.</p>
+        <span class="form__text">* Indicates a required field</span>
+        <fieldset class="relative flex">
+            <legend class="legend--margin--small">Please select a restaurant</legend>
+            <label class="form__label" for="location">* Search and select a restaurant</label>
+            <input class="form__input-search form__input-search--margin" type="search" name="location" id="location" placeholder="Restaurant Locator">
+            <span class="form__input-search--icon"></span>
+        </fieldset>
+        <fieldset>
+            <legend class="legend--margin">Tell us about your visit</legend>
+            <ul>
+                <li class="relative flex-reverse">
+                    <input class="form__input form__input--margin" type="text" name="date" id="date" placeholder="__/__/____" minlength="8" maxlength="10" pattern="\d{1,2}/\d{1,2}/\d{4}">
+                    <label class="form__label form__label--absolute" for="date">* Visit Date (MM/DD/YYYY)</label>
+                    <span class="form__text form__text--error">Error: Please enter a valid date in the format MM/DD/YYYY.</span>
+                </li>
+                <div class="form__container">
+                    <li class="relative flex-reverse form__list--flex">
+                            <input class="form__input form__input--margin" type="text" name="time" id="time" placeholder="__:__" minlength="5" maxlength="5" pattern="{2}:{2}">
+                            <label class="form__label form__label--absolute" for="time">* Visit time (hh:mm)</label>
+                            <span class="form__text form__text--error">Error: Please enter a valid time in the 12-hour format (HH:MM AM/PM)</span>
+                    </li>
+                    <li class="relative form__list--flex">
+                        <select class="form__select form__select--margin" name="ampm" id="ampm" required>
+                            <option value="" hidden></option>
+                            <option value="am">AM</option>
+                            <option value="pm">PM</option>
+                        </select>
+                        <label class="form__label form__label--absolute" for="ampm">* AM/PM</label>
+                    </li>
+                </div>
+                <li class="relative">
+                    <select class="form__select form__select--margin" name="method" id="method" required>
+                        <option value="" hidden></option>
+                        <option value="counter-in-store">Counter In-Store</option>
+                        <option value="drive-thru">Drive-thru</option>
+                        <option value="app">Mcdonald's Mobile App</option>
+                        <option value="kiosk">Kiosk</option>
+                        <option value="delivery">Delivery Vendor</option>
+                        <option value="handheld">Handheld Order Taker</option>
+                        <option value="na">Not Applicable</option>
+                    </select>
+                    <label class="form__label form__label--absolute" for="method">* How did you place your order?</label>
+                </li>
+                <li class="relative">
+                    <select class="form__select form__select--margin" name="pickupmethod" id="pickupmethod" required>
+                        <option value="" hidden></option>
+                        <option value="instore">In-Store</option>
+                        <option value="table">Table Service</option>
+                        <option value="takeout">Take Out</option>
+                    </select>
+                    <label class="form__label form__label--absolute" for="pickupmethod">* How did you pick up your order?</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="relative form__fieldset--margin">
+            <legend class="legend--margin">Give us your feedback</legend>
+            <textarea class="form__input form__input--margin input__placeholder" name="feedback" id="feedback" cols="30" rows="1" maxlength="1200" placeholder="Enter your comments"></textarea>
+            <label class="form__label form__label--absolute" for="feedback">* Enter your comments (0/1200characters)</label>
+        </fieldset>
+        <fieldset class="form__fieldset--margin">
+            <legend class="legend--margin">Tell us about yourself</legend>
+            <ul>
+                <li class="relative">
+                    <input class="form__input form__input--margin input__placeholder" type="text" name="firstname" id="firstname" placeholder="First Name">
+                    <label class="form__label form__label--absolute" for="firstname">* First Name</label>
+                </li>
+                <li class="relative">
+                    <input class="form__input form__input--margin input__placeholder" type="text" name="surname" id="surname" placeholder="Last Name">
+                    <label class="form__label form__label--absolute" for="surname">* Last Name</label>
+                </li>
+                <li class="relative flex-reverse">
+                    <input class="form__input form__input--margin input__placeholder" type="email" name="email" id="email" placeholder="Email">
+                    <label class="form__label form__label--absolute" for="email">* Email</label>
+                    <span class="form__text form__text--error">Error: Please enter (valid) 'Your email address' Information</span>
+                </li>
+                <li class="relative flex-reverse">
+                    <input class="form__input form__input--margin input__placeholder" type="email" name="emailconfirm" id="emailconfirm" placeholder="Confirm Email">
+                    <label class="form__label form__label--absolute" for="emailconfirm">* Confirm Email</label>
+                    <span class="form__text form__text--error">Error: Please confirm that both Email Addresses are the same </span>
+                </li>
+                <li class="relative">
+                    <input class="form__input form__input--margin input__placeholder" type="tel" name="phone" id="phone" placeholder="Phone">
+                    <label class="form__label form__label--absolute" for="phone">* Phone</label>
+                    <span class="form__text form__text--error">Error: Please enter a valid Phone Number</span>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend class="fieldset__legend--small">* Do you want the Owner's organization to contact you?</legend>
+            <ul>
+                <li class="relative form__list--margin">
+                    <input class="form__input-radio form__input-radio--checked" type="radio" name="contactuser" id="contactyes" required>
+                    <span class="form__input-radio--created"></span>
+                    <label class="form__label form__label--radio-margin" for="contactyes">Yes</label>
+                </li>
+                <li class="relative form__list--margin">
+                    <input class="form__input-radio" type="radio" name="contactuser" id="contactno">
+                    <span class="form__input-radio--created"></span>
+                    <label class="form__label form__label--radio-margin" for="contactno">No</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="form__fieldset--hidden" id="hidden">
+            <legend class="legend--margin">Contact Information</legend>
+            <ul>
+                <li class="relative">
+                    <input class="form__input form__input--margin input__placeholder" type="text" name="address1" id="address1" placeholder="Address Line 1">
+                    <label class="form__label form__label--absolute" for="address1">* Address Line 1</label>
+                </li>
+                <li class="relative">
+                    <input class="form__input form__input--margin input__placeholder" type="text" name="address2" id="address2" placeholder="Address Line 2">
+                    <label class="form__label form__label--absolute" for="address2">Address Line 2</label>
+                </li>
+                <li class="relative">
+                    <input class="form__input form__input--margin input__placeholder" type="text" name="city" id="city" placeholder="City">
+                    <label class="form__label form__label--absolute" for="city">* City</label>
+                </li>
+                <li class="relative">
+                    <select class="form__select form__select--margin" name="state" id="state" required>
+                        <option value="" hidden></option>
+                        <option value="alaska">Alaska</option>
+                    </select>
+                    <label class="form__label form__label--absolute" for="state">* State</label>
+                </li>
+                <li class="relative">
+                    <input class="form__input form__input--margin input__placeholder" type="text" name="zipcode" id="zipcode" placeholder="Zip">
+                    <label class="form__label form__label--absolute" for="zipcode">* Zip</label>
+                </li>
+                <li>
+                    <p>By selecting submit, any information you provide to Mcdonald's will be used in accordance with McDonald's 
+                        <a href="">Privacy Policy</a>
+                        .we may contact your regarding your submission.
+                    </p>
+                </li>
+                <li>
+                    <button class="button__submit">Submit</button>
+                </li>
+                <li>
+                    <button class="button__reset" type="reset">Reset</button>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
